@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font.Rand()</title>
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <header>
+        <h1 id="logo">Font.Rand()</h1>
+    </header>
+    <main>
+        <div class="container" id="js-container">
+            <div>
+                <h1 class="genHeader" id="js-genHeader">Hey there, I'm your sample header. Feel free to lock me or change my text!</h1>
+            </div>
+            <div id="paragraphs">
+                <p class="genPara js-genPara">Spicy jalapeno bacon ipsum dolor amet strip steak short loin beef ribs jerky. Pork belly venison cow boudin kevin chuck, 
+                    ribeye shankle beef ribs t-bone. Biltong leberkas short loin pastrami sirloin tenderloin. Pork belly shank jowl, 
+                    flank cupim burgdoggen hamburger porchetta turducken prosciutto cow spare ribs. Beef ribs hamburger salami meatloaf, 
+                    capicola landjaeger drumstick chicken tenderloin.</p>
+                <p class="genPara js-genPara">Short loin pancetta capicola, pastrami ham hock shank kevin kielbasa beef ribs. Jowl frankfurter turkey shank hamburger 
+                    shoulder drumstick pork loin picanha swine prosciutto chuck sirloin strip steak. Ham hock porchetta shoulder drumstick sausage. Drumstick hamburger boudin, 
+                    beef brisket picanha sirloin shoulder kielbasa. Rump chicken pancetta swine turkey leberkas boudin picanha short loin burgdoggen. Alcatra tenderloin tongue 
+                    turkey ground round beef short loin leberkas filet mignon turducken bresaola beef ribs. Jerky chicken kevin sirloin landjaeger.</p>
+                <p class="genPara js-genPara">Shankle salami leberkas filet mignon, pork loin jowl kevin chicken kielbasa hamburger. Drumstick boudin pork belly sausage 
+                    prosciutto chuck turkey meatball ribeye, brisket bresaola kielbasa ball tip venison. Flank shankle pancetta, meatball rump t-bone pork loin tenderloin 
+                    venison sausage. Strip steak tail alcatra pastrami turducken ribeye. Swine meatloaf alcatra, pork salami strip steak tail turkey ribeye chicken ham pork 
+                    loin. Cupim pork loin landjaeger doner porchetta chicken burgdoggen salami boudin strip steak meatball hamburger short loin.</p>
+            </div>
+            <div class="controls" id="js-controls">
+                <div id="randomizeBtnContainer">
+                    <button id="js-randomizeBtn">Randomize!</button>
+                </div>
+                <button id="js-resultsBtn">Show Results</button>
+                <div id="locks">
+                    <div>
+                        <label><input type="checkbox" id="js-headerLockBtn">Lock Header</label>
+                        <p id="currentHeaderFont"></p>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" id="js-paraLockBtn">Lock Paragraphs</label>
+                        <p id="currentParaFont"></p>
+                    </div>
+                </div>
+                <div id="categoryDrops">
+                    <label for="headerCategories">Header Type:</label>
+                    <select name="headerCategories" id="js-headerCategories">
+                        <option value="sans-serif">Sans-serif</option>
+                        <option value="serif">Serif</option>
+                        <option value="display">Display</option>
+                        <option value="handwriting">Handwriting</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+                    <label for="paraCategories">Paragraph Type:</label>
+                    <select name="paraCategories" id="js-paraCategories">
+                        <option value="serif">Serif</option>
+                        <option value="sans-serif">Sans-serif</option>
+                        <option value="display">Display</option>
+                        <option value="handwriting">Handwriting</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modalContainer">
+                <span id="modalClose">&times;</span>
+                <div class="modalBody">
+                    <div class="modalResults">
+                        <h4>Embed</h4>
+                        <p class="modalTip">To embed your fonts, simply copy this code into the <code>&lt;head&gt;</code> of your HTML document.</p>
+                        <div class="modalCodeBlock">
+                            <pre><code id="headerCode"></code></pre>
+                            <pre><code id="paraCode"></code></pre>
+                        </div>
+                    </div>
+                    <div class="modalResults">
+                        <h4>Specify in CSS</h4>
+                        <p class="modalTip">Use the following CSS rules to specify these families.</p>
+                        <div class="modalCodeBlock" id="modalCSSResults">
+                            <div class="modalCSSBlock">
+                                <p>Header</p>
+                                <pre><code id="headerCSS"></code></pre>
+                            </div>
+                            <div class="modalCSSBlock">
+                                <p>Paragraph</p>
+                                <pre><code id="paraCSS"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="modalFooter">
+                    <h3>Enjoy your fonts!</h3>
+                </div>-->
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="js/jquery.flipping_text.js"></script>
+<script src="js/app.js"></script>
+</html>
